@@ -25,6 +25,7 @@ class LocalStore:
     def __init__(self, file_path: str) -> None:
         self._path = Path(file_path)
         self._lock = RLock()
+        self._persistence_enabled = True
         self._tables: dict[str, list[dict[str, Any]]] = {}
         self._counters: dict[str, int] = {}
         self._initialize_state()
@@ -46,30 +47,39 @@ class LocalStore:
 
     def _load(self) -> None:
         with self._lock:
-            if not self._path.exists():
-                self._path.parent.mkdir(parents=True, exist_ok=True)
-                self._save_unlocked()
-                return
+            try:
+                if not self._path.exists():
+                    self._path.parent.mkdir(parents=True, exist_ok=True)
+                    self._save_unlocked()
+                    return
 
-            data = json.loads(self._path.read_text(encoding="utf-8"))
-            for table in self._tables:
-                self._tables[table] = list(data.get("tables", {}).get(table, []))
-            self._counters.update(data.get("counters", {}))
+                data = json.loads(self._path.read_text(encoding="utf-8"))
+                for table in self._tables:
+                    self._tables[table] = list(data.get("tables", {}).get(table, []))
+                self._counters.update(data.get("counters", {}))
 
-            for table, rows in self._tables.items():
-                max_id = max((int(row.get("id", 0) or 0) for row in rows), default=0)
-                self._counters[table] = max(self._counters.get(table, 0), max_id)
+                for table, rows in self._tables.items():
+                    max_id = max((int(row.get("id", 0) or 0) for row in rows), default=0)
+                    self._counters[table] = max(self._counters.get(table, 0), max_id)
+            except OSError:
+                # In restricted environments (e.g. serverless read-only FS), keep working in memory.
+                self._persistence_enabled = False
 
     def _save_unlocked(self) -> None:
+        if not self._persistence_enabled:
+            return
         payload = {
             "tables": self._tables,
             "counters": self._counters,
         }
-        self._path.parent.mkdir(parents=True, exist_ok=True)
-        self._path.write_text(
-            json.dumps(payload, ensure_ascii=True, indent=2),
-            encoding="utf-8",
-        )
+        try:
+            self._path.parent.mkdir(parents=True, exist_ok=True)
+            self._path.write_text(
+                json.dumps(payload, ensure_ascii=True, indent=2),
+                encoding="utf-8",
+            )
+        except OSError:
+            self._persistence_enabled = False
 
     def _save(self) -> None:
         with self._lock:
