@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start:dev": "concurrently -k -n BACKEND,FRONTEND -c green,cyan \"powershell -ExecutionPolicy Bypass -File ./scripts/start_backend.ps1\" \"powershell -ExecutionPolicy Bypass -File ./scripts/start_frontend.ps1\"",
+    "start:prod": "concurrently -k -n BACKEND,FRONTEND -c green,cyan \"powershell -ExecutionPolicy Bypass -File ./scripts/start_backend_prod.ps1\" \"powershell -ExecutionPolicy Bypass -File ./scripts/start_frontend_prod.ps1\"",
     "start:backend": "powershell -ExecutionPolicy Bypass -File ./scripts/start_backend.ps1",
     "start:frontend": "powershell -ExecutionPolicy Bypass -File ./scripts/start_frontend.ps1"
   },
