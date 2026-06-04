@@ -11,10 +11,20 @@ import type {
   WhatIfResponse,
 } from "../types";
 
-const FALLBACK_API_URL =
-  typeof window === "undefined"
-    ? "http://localhost:8000/api/v1"
-    : `${window.location.protocol}//${window.location.hostname}:8000/api/v1`;
+const FALLBACK_API_URL = (() => {
+  if (typeof window === "undefined") {
+    return "http://localhost:8000/api/v1";
+  }
+
+  const { origin, hostname } = window.location;
+  const isLocalHost = hostname === "localhost" || hostname === "127.0.0.1";
+
+  if (isLocalHost) {
+    return `${window.location.protocol}//${hostname}:8000/api/v1`;
+  }
+
+  return `${origin}/_/backend/api/v1`;
+})();
 
 const API_URL = import.meta.env.VITE_API_URL ?? FALLBACK_API_URL;
 
