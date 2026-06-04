@@ -1,0 +1,5962 @@
+{
+  "tables": {
+    "users": [
+      {
+        "username": "admin",
+        "full_name": "Administrador",
+        "role": "admin",
+        "hashed_password": "$pbkdf2-sha256$29000$fe.9N2YMIWSMEaJUijHmfA$Xs9U/a0fK5WQGUQoBB2vQ25lVKy1xPHpk96bcHBk2XM",
+        "id": 1,
+        "is_active": true
+      },
+      {
+        "username": "planner",
+        "full_name": "Planificador",
+        "role": "planner",
+        "hashed_password": "$pbkdf2-sha256$29000$i7HWeu89pzTGOOf8P0fo3Q$RswSjCYqVe0w0VTbC0FkocoemTEKkzcDBAJMpCeJqRc",
+        "id": 2,
+        "is_active": true
+      },
+      {
+        "username": "dispatcher",
+        "full_name": "Despachador",
+        "role": "dispatcher",
+        "hashed_password": "$pbkdf2-sha256$29000$0Lr3/j9HaO0dA6BUivH.Xw$FxTDOsiC2tRpCoNUSMQtQAQiGrmmkrAq9O.gn8OVLhE",
+        "id": 3,
+        "is_active": true
+      }
+    ],
+    "vehicles": [
+      {
+        "plate": "TRK-101",
+        "capacity_weight_kg": 2800,
+        "capacity_volume_m3": 16,
+        "compatible_load_types": "general,refrigerated",
+        "cost_per_km": 1.9,
+        "cost_per_hour": 20,
+        "id": 1,
+        "shift_start_min": 360,
+        "shift_end_min": 1200,
+        "available": true
+      },
+      {
+        "plate": "TRK-102",
+        "capacity_weight_kg": 3500,
+        "capacity_volume_m3": 21,
+        "compatible_load_types": "general,hazardous",
+        "cost_per_km": 2.1,
+        "cost_per_hour": 21,
+        "id": 2,
+        "shift_start_min": 360,
+        "shift_end_min": 1200,
+        "available": true
+      },
+      {
+        "plate": "VAN-205",
+        "capacity_weight_kg": 1300,
+        "capacity_volume_m3": 9,
+        "compatible_load_types": "general",
+        "cost_per_km": 1.5,
+        "cost_per_hour": 16,
+        "id": 3,
+        "shift_start_min": 360,
+        "shift_end_min": 1200,
+        "available": true
+      }
+    ],
+    "drivers": [
+      {
+        "name": "Ana Rios",
+        "license_type": "C3",
+        "id": 1,
+        "shift_start_min": 360,
+        "shift_end_min": 1200,
+        "available": true
+      },
+      {
+        "name": "Mateo Ruiz",
+        "license_type": "C2",
+        "id": 2,
+        "shift_start_min": 360,
+        "shift_end_min": 1200,
+        "available": true
+      },
+      {
+        "name": "Lucia Perez",
+        "license_type": "C2",
+        "id": 3,
+        "shift_start_min": 360,
+        "shift_end_min": 1200,
+        "available": true
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "customer_name": "Cliente Alfa",
+        "priority": 5,
+        "sla_minutes": 180,
+        "weight_kg": 700,
+        "volume_m3": 3.8,
+        "service_time_min": 20,
+        "latitude": 14.6118,
+        "longitude": -90.5213,
+        "window_start": "2026-05-31T07:29:43.968757+00:00",
+        "window_end": "2026-05-31T09:29:43.968757+00:00",
+        "load_type": "general",
+        "status": "planned"
+      },
+      {
+        "id": 2,
+        "customer_name": "Cliente Beta",
+        "priority": 4,
+        "sla_minutes": 240,
+        "weight_kg": 900,
+        "volume_m3": 4.0,
+        "service_time_min": 25,
+        "latitude": 14.6487,
+        "longitude": -90.5133,
+        "window_start": "2026-05-31T08:09:43.968757+00:00",
+        "window_end": "2026-05-31T10:29:43.968757+00:00",
+        "load_type": "refrigerated",
+        "status": "planned"
+      },
+      {
+        "id": 3,
+        "customer_name": "Cliente Gamma",
+        "priority": 3,
+        "sla_minutes": 300,
+        "weight_kg": 1200,
+        "volume_m3": 5.5,
+        "service_time_min": 30,
+        "latitude": 14.6281,
+        "longitude": -90.5522,
+        "window_start": "2026-05-31T08:39:43.968757+00:00",
+        "window_end": "2026-05-31T11:29:43.968757+00:00",
+        "load_type": "hazardous",
+        "status": "planned"
+      },
+      {
+        "id": 4,
+        "customer_name": "Cliente Delta",
+        "priority": 5,
+        "sla_minutes": 200,
+        "weight_kg": 500,
+        "volume_m3": 2.1,
+        "service_time_min": 18,
+        "latitude": 14.5892,
+        "longitude": -90.491,
+        "window_start": "2026-05-31T07:49:43.968757+00:00",
+        "window_end": "2026-05-31T09:59:43.968757+00:00",
+        "load_type": "general",
+        "status": "planned"
+      },
+      {
+        "id": 5,
+        "customer_name": "Cliente Epsilon",
+        "priority": 2,
+        "sla_minutes": 360,
+        "weight_kg": 300,
+        "volume_m3": 1.5,
+        "service_time_min": 15,
+        "latitude": 14.6655,
+        "longitude": -90.5078,
+        "window_start": "2026-05-31T08:29:43.968757+00:00",
+        "window_end": "2026-05-31T12:29:43.968757+00:00",
+        "load_type": "general",
+        "status": "planned"
+      }
+    ],
+    "plans": [
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 1,
+        "created_at": "2026-05-31T05:50:56.647515+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 2,
+        "created_at": "2026-05-31T05:55:03.092572+00:00",
+        "status": "draft"
+      },
+      {
+        "id": 3,
+        "created_at": "2026-05-31T05:56:49.518992+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 4,
+        "created_at": "2026-05-31T05:56:55.700317+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 5,
+        "created_at": "2026-05-31T05:56:57.404908+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 6,
+        "created_at": "2026-05-31T05:57:00.541987+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 7,
+        "created_at": "2026-05-31T05:57:01.230293+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 8,
+        "created_at": "2026-05-31T05:57:01.604609+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 9,
+        "created_at": "2026-05-31T05:57:01.791375+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 10,
+        "created_at": "2026-05-31T05:57:01.959812+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 11,
+        "created_at": "2026-05-31T05:57:02.142330+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 12,
+        "created_at": "2026-05-31T05:57:02.312624+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 13,
+        "created_at": "2026-05-31T05:57:04.389300+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 14,
+        "created_at": "2026-05-31T05:57:04.708958+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 15,
+        "created_at": "2026-05-31T05:57:04.852737+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 16,
+        "created_at": "2026-05-31T05:57:05.231074+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 15",
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "created_at": "2026-05-31T05:57:06.179791+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 16",
+        "alerts_json": []
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 17",
+        "alerts_json": [],
+        "id": 18,
+        "created_at": "2026-05-31T05:57:06.646712+00:00",
+        "status": "draft"
+      },
+      {
+        "id": 19,
+        "created_at": "2026-05-31T05:57:07.542227+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 20,
+        "created_at": "2026-05-31T05:57:08.700286+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 19",
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "created_at": "2026-05-31T05:57:09.642031+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 20",
+        "alerts_json": []
+      },
+      {
+        "id": 22,
+        "created_at": "2026-05-31T05:57:53.693742+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 22",
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          }
+        ],
+        "id": 23,
+        "created_at": "2026-05-31T05:57:59.831421+00:00",
+        "status": "draft"
+      },
+      {
+        "id": 24,
+        "created_at": "2026-05-31T05:58:05.275799+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 25,
+        "created_at": "2026-05-31T05:58:06.218551+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 26,
+        "created_at": "2026-05-31T05:58:06.515618+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 27,
+        "created_at": "2026-05-31T05:58:06.686464+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 28,
+        "created_at": "2026-05-31T05:58:06.850677+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 29,
+        "created_at": "2026-05-31T06:00:48.024976+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 30,
+        "created_at": "2026-05-31T06:00:48.637911+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 31,
+        "created_at": "2026-05-31T06:00:48.818145+00:00",
+        "status": "draft"
+      },
+      {
+        "id": 32,
+        "created_at": "2026-05-31T06:00:48.978740+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 33,
+        "created_at": "2026-05-31T06:00:50.325286+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 34,
+        "created_at": "2026-05-31T06:00:50.996047+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 35,
+        "created_at": "2026-05-31T06:00:51.148043+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 36,
+        "created_at": "2026-05-31T06:01:22.322444+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 37,
+        "created_at": "2026-05-31T06:01:22.680658+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 38,
+        "created_at": "2026-05-31T06:01:56.783499+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 39,
+        "created_at": "2026-05-31T06:02:12.082596+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 40,
+        "created_at": "2026-05-31T06:03:11.027978+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 41,
+        "created_at": "2026-05-31T06:03:20.095865+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 42,
+        "created_at": "2026-05-31T06:03:20.574837+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 42",
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          }
+        ],
+        "id": 43,
+        "created_at": "2026-05-31T06:03:36.446294+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 44,
+        "created_at": "2026-05-31T06:08:58.650880+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 45,
+        "created_at": "2026-05-31T06:10:25.358903+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 46,
+        "created_at": "2026-05-31T06:10:26.103474+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 47,
+        "created_at": "2026-05-31T06:10:26.766002+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 48,
+        "created_at": "2026-05-31T06:10:27.188157+00:00",
+        "status": "draft"
+      },
+      {
+        "id": 49,
+        "created_at": "2026-05-31T06:10:29.127409+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": []
+      },
+      {
+        "id": 50,
+        "created_at": "2026-05-31T06:30:49.674019+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 18.4,
+        "total_cost": 74.12,
+        "scenario_name": "Reprogramacion de plan 49",
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "created_at": "2026-05-31T06:32:44.575171+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 7.12,
+        "total_cost": 23.8,
+        "scenario_name": null,
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 3 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 5 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "created_at": "2026-05-31T06:32:55.356574+00:00",
+        "created_by": 2,
+        "status": "reprogrammed",
+        "total_distance_km": 7.12,
+        "total_cost": 23.8,
+        "scenario_name": null,
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 3 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 5 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 7.12,
+        "total_cost": 32.18,
+        "scenario_name": "Reprogramacion de plan 52",
+        "alerts_json": [],
+        "id": 53,
+        "created_at": "2026-05-31T06:33:27.348300+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 7.12,
+        "total_cost": 32.18,
+        "scenario_name": "Reprogramacion de plan 52",
+        "alerts_json": [],
+        "id": 54,
+        "created_at": "2026-05-31T06:33:29.613986+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 7.12,
+        "total_cost": 32.18,
+        "scenario_name": "Reprogramacion de plan 52",
+        "alerts_json": [],
+        "id": 55,
+        "created_at": "2026-05-31T06:33:30.900324+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 7.12,
+        "total_cost": 23.8,
+        "scenario_name": null,
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 3 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 5 no se pudo asignar con restricciones actuales"
+          }
+        ],
+        "id": 56,
+        "created_at": "2026-05-31T06:34:01.540842+00:00",
+        "status": "draft"
+      },
+      {
+        "id": 57,
+        "created_at": "2026-05-31T06:34:02.954308+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 7.12,
+        "total_cost": 23.8,
+        "scenario_name": null,
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 3 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 5 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "created_at": "2026-05-31T06:34:04.340781+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 7.12,
+        "total_cost": 23.8,
+        "scenario_name": null,
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 3 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 5 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "created_at": "2026-05-31T06:34:13.660001+00:00",
+        "created_by": 2,
+        "status": "dispatched",
+        "total_distance_km": 21.33,
+        "total_cost": 85.63,
+        "scenario_name": null,
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          }
+        ]
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 60,
+        "created_at": "2026-05-31T06:40:52.759602+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 21.05,
+        "total_cost": 88.68,
+        "scenario_name": null,
+        "alerts_json": [],
+        "id": 61,
+        "created_at": "2026-05-31T06:41:20.738901+00:00",
+        "status": "draft"
+      },
+      {
+        "created_by": 2,
+        "total_distance_km": 7.12,
+        "total_cost": 23.8,
+        "scenario_name": null,
+        "alerts_json": [
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 2 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 3 no se pudo asignar con restricciones actuales"
+          },
+          {
+            "type": "unassigned_order",
+            "severity": "high",
+            "message": "Orden 5 no se pudo asignar con restricciones actuales"
+          }
+        ],
+        "id": 62,
+        "created_at": "2026-05-31T06:43:10.128747+00:00",
+        "status": "draft"
+      }
+    ],
+    "planstops": [
+      {
+        "plan_id": 1,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:20:41.558203+00:00",
+        "etd": "2026-05-31T06:40:41.558203+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 1
+      },
+      {
+        "plan_id": 1,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:47:11.540806+00:00",
+        "etd": "2026-05-31T07:05:11.540806+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 2
+      },
+      {
+        "plan_id": 1,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:16:18.273711+00:00",
+        "etd": "2026-05-31T07:41:18.273711+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 3
+      },
+      {
+        "plan_id": 1,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:30:41.558203+00:00",
+        "etd": "2026-05-31T08:00:41.558203+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 4
+      },
+      {
+        "plan_id": 1,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:44:23.913852+00:00",
+        "etd": "2026-05-31T07:59:23.913852+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 5
+      },
+      {
+        "plan_id": 2,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:22:04.815387+00:00",
+        "etd": "2026-05-31T06:42:04.815387+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 6
+      },
+      {
+        "plan_id": 2,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:48:34.797990+00:00",
+        "etd": "2026-05-31T07:06:34.797990+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 7
+      },
+      {
+        "plan_id": 2,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:17:41.530895+00:00",
+        "etd": "2026-05-31T07:42:41.530895+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 8
+      },
+      {
+        "plan_id": 2,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:32:04.815387+00:00",
+        "etd": "2026-05-31T08:02:04.815387+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 9
+      },
+      {
+        "plan_id": 2,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:45:47.171036+00:00",
+        "etd": "2026-05-31T08:00:47.171036+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 10
+      },
+      {
+        "plan_id": 3,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 11
+      },
+      {
+        "plan_id": 3,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 12
+      },
+      {
+        "plan_id": 3,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 13
+      },
+      {
+        "plan_id": 3,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 14
+      },
+      {
+        "plan_id": 3,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 15
+      },
+      {
+        "plan_id": 4,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 16
+      },
+      {
+        "plan_id": 4,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 17
+      },
+      {
+        "plan_id": 4,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 18
+      },
+      {
+        "plan_id": 4,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 19
+      },
+      {
+        "plan_id": 4,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 20
+      },
+      {
+        "plan_id": 5,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 21
+      },
+      {
+        "plan_id": 5,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 22
+      },
+      {
+        "plan_id": 5,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 23
+      },
+      {
+        "plan_id": 5,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 24
+      },
+      {
+        "plan_id": 5,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 25
+      },
+      {
+        "plan_id": 6,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 26
+      },
+      {
+        "plan_id": 6,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 27
+      },
+      {
+        "plan_id": 6,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 28
+      },
+      {
+        "plan_id": 6,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 29
+      },
+      {
+        "plan_id": 6,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 30
+      },
+      {
+        "plan_id": 7,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 31
+      },
+      {
+        "plan_id": 7,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 32
+      },
+      {
+        "plan_id": 7,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 33
+      },
+      {
+        "plan_id": 7,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 34
+      },
+      {
+        "plan_id": 7,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 35
+      },
+      {
+        "plan_id": 8,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 36
+      },
+      {
+        "plan_id": 8,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 37
+      },
+      {
+        "plan_id": 8,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 38
+      },
+      {
+        "plan_id": 8,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 39
+      },
+      {
+        "plan_id": 8,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 40
+      },
+      {
+        "plan_id": 9,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 41
+      },
+      {
+        "plan_id": 9,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 42
+      },
+      {
+        "plan_id": 9,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 43
+      },
+      {
+        "plan_id": 9,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 44
+      },
+      {
+        "plan_id": 9,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 45
+      },
+      {
+        "plan_id": 10,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 46
+      },
+      {
+        "plan_id": 10,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 47
+      },
+      {
+        "plan_id": 10,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 48
+      },
+      {
+        "plan_id": 10,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 49
+      },
+      {
+        "plan_id": 10,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 50
+      },
+      {
+        "plan_id": 11,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 51
+      },
+      {
+        "plan_id": 11,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 52
+      },
+      {
+        "plan_id": 11,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 53
+      },
+      {
+        "plan_id": 11,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 54
+      },
+      {
+        "plan_id": 11,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 55
+      },
+      {
+        "plan_id": 12,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 56
+      },
+      {
+        "plan_id": 12,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 57
+      },
+      {
+        "plan_id": 12,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 58
+      },
+      {
+        "plan_id": 12,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 59
+      },
+      {
+        "plan_id": 12,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 60
+      },
+      {
+        "plan_id": 13,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 61
+      },
+      {
+        "plan_id": 13,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 62
+      },
+      {
+        "plan_id": 13,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 63
+      },
+      {
+        "plan_id": 13,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 64
+      },
+      {
+        "plan_id": 13,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 65
+      },
+      {
+        "plan_id": 14,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 66
+      },
+      {
+        "plan_id": 14,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 67
+      },
+      {
+        "plan_id": 14,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 68
+      },
+      {
+        "plan_id": 14,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 69
+      },
+      {
+        "plan_id": 14,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 70
+      },
+      {
+        "plan_id": 15,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 71
+      },
+      {
+        "plan_id": 15,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 72
+      },
+      {
+        "plan_id": 15,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 73
+      },
+      {
+        "plan_id": 15,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 74
+      },
+      {
+        "plan_id": 15,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 75
+      },
+      {
+        "plan_id": 16,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:29:44.181609+00:00",
+        "etd": "2026-05-31T06:49:44.181609+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 76
+      },
+      {
+        "plan_id": 16,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:56:14.164212+00:00",
+        "etd": "2026-05-31T07:14:14.164212+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 77
+      },
+      {
+        "plan_id": 16,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 78
+      },
+      {
+        "plan_id": 16,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:25:47.165977+00:00",
+        "etd": "2026-05-31T07:40:47.165977+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 79
+      },
+      {
+        "plan_id": 17,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:29:44.181609+00:00",
+        "etd": "2026-05-31T06:49:44.181609+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 80
+      },
+      {
+        "plan_id": 17,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:56:14.164212+00:00",
+        "etd": "2026-05-31T07:14:14.164212+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 81
+      },
+      {
+        "plan_id": 17,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 82
+      },
+      {
+        "plan_id": 17,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:25:47.165977+00:00",
+        "etd": "2026-05-31T07:40:47.165977+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 83
+      },
+      {
+        "plan_id": 18,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:29:44.181609+00:00",
+        "etd": "2026-05-31T06:49:44.181609+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 84
+      },
+      {
+        "plan_id": 18,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:56:14.164212+00:00",
+        "etd": "2026-05-31T07:14:14.164212+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 85
+      },
+      {
+        "plan_id": 18,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 86
+      },
+      {
+        "plan_id": 18,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:25:47.165977+00:00",
+        "etd": "2026-05-31T07:40:47.165977+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 87
+      },
+      {
+        "plan_id": 19,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 88
+      },
+      {
+        "plan_id": 19,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 89
+      },
+      {
+        "plan_id": 19,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 90
+      },
+      {
+        "plan_id": 19,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 91
+      },
+      {
+        "plan_id": 19,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 92
+      },
+      {
+        "plan_id": 20,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:29:44.181609+00:00",
+        "etd": "2026-05-31T06:49:44.181609+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 93
+      },
+      {
+        "plan_id": 20,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:56:14.164212+00:00",
+        "etd": "2026-05-31T07:14:14.164212+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 94
+      },
+      {
+        "plan_id": 20,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 95
+      },
+      {
+        "plan_id": 20,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:25:47.165977+00:00",
+        "etd": "2026-05-31T07:40:47.165977+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 96
+      },
+      {
+        "plan_id": 21,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:29:44.181609+00:00",
+        "etd": "2026-05-31T06:49:44.181609+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 97
+      },
+      {
+        "plan_id": 21,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:56:14.164212+00:00",
+        "etd": "2026-05-31T07:14:14.164212+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 98
+      },
+      {
+        "plan_id": 21,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 99
+      },
+      {
+        "plan_id": 21,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:25:47.165977+00:00",
+        "etd": "2026-05-31T07:40:47.165977+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 100
+      },
+      {
+        "plan_id": 22,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 101
+      },
+      {
+        "plan_id": 22,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 102
+      },
+      {
+        "plan_id": 22,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 103
+      },
+      {
+        "plan_id": 22,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 104
+      },
+      {
+        "plan_id": 22,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 105
+      },
+      {
+        "plan_id": 23,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:29:44.181609+00:00",
+        "etd": "2026-05-31T06:49:44.181609+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 106
+      },
+      {
+        "plan_id": 23,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:56:14.164212+00:00",
+        "etd": "2026-05-31T07:14:14.164212+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 107
+      },
+      {
+        "plan_id": 23,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 108
+      },
+      {
+        "plan_id": 23,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:25:47.165977+00:00",
+        "etd": "2026-05-31T07:40:47.165977+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 109
+      },
+      {
+        "plan_id": 24,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 110
+      },
+      {
+        "plan_id": 24,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 111
+      },
+      {
+        "plan_id": 24,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 112
+      },
+      {
+        "plan_id": 24,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 113
+      },
+      {
+        "plan_id": 24,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 114
+      },
+      {
+        "plan_id": 25,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 115
+      },
+      {
+        "plan_id": 25,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 116
+      },
+      {
+        "plan_id": 25,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 117
+      },
+      {
+        "plan_id": 25,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 118
+      },
+      {
+        "plan_id": 25,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 119
+      },
+      {
+        "plan_id": 26,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 120
+      },
+      {
+        "plan_id": 26,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 121
+      },
+      {
+        "plan_id": 26,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 122
+      },
+      {
+        "plan_id": 26,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 123
+      },
+      {
+        "plan_id": 26,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 124
+      },
+      {
+        "plan_id": 27,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 125
+      },
+      {
+        "plan_id": 27,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 126
+      },
+      {
+        "plan_id": 27,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 127
+      },
+      {
+        "plan_id": 27,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 128
+      },
+      {
+        "plan_id": 27,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 129
+      },
+      {
+        "plan_id": 28,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:25:47.165977+00:00",
+        "etd": "2026-05-31T06:45:47.165977+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 130
+      },
+      {
+        "plan_id": 28,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:52:17.148580+00:00",
+        "etd": "2026-05-31T07:10:17.148580+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 131
+      },
+      {
+        "plan_id": 28,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:21:23.881485+00:00",
+        "etd": "2026-05-31T07:46:23.881485+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 132
+      },
+      {
+        "plan_id": 28,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:35:47.165977+00:00",
+        "etd": "2026-05-31T08:05:47.165977+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 133
+      },
+      {
+        "plan_id": 28,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:49:29.521626+00:00",
+        "etd": "2026-05-31T08:04:29.521626+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 134
+      },
+      {
+        "plan_id": 29,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 135
+      },
+      {
+        "plan_id": 29,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 136
+      },
+      {
+        "plan_id": 29,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 137
+      },
+      {
+        "plan_id": 29,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 138
+      },
+      {
+        "plan_id": 29,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 139
+      },
+      {
+        "plan_id": 30,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 140
+      },
+      {
+        "plan_id": 30,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 141
+      },
+      {
+        "plan_id": 30,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 142
+      },
+      {
+        "plan_id": 30,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 143
+      },
+      {
+        "plan_id": 30,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 144
+      },
+      {
+        "plan_id": 31,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 145
+      },
+      {
+        "plan_id": 31,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 146
+      },
+      {
+        "plan_id": 31,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 147
+      },
+      {
+        "plan_id": 31,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 148
+      },
+      {
+        "plan_id": 31,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 149
+      },
+      {
+        "plan_id": 32,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 150
+      },
+      {
+        "plan_id": 32,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 151
+      },
+      {
+        "plan_id": 32,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 152
+      },
+      {
+        "plan_id": 32,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 153
+      },
+      {
+        "plan_id": 32,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 154
+      },
+      {
+        "plan_id": 33,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 155
+      },
+      {
+        "plan_id": 33,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 156
+      },
+      {
+        "plan_id": 33,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 157
+      },
+      {
+        "plan_id": 33,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 158
+      },
+      {
+        "plan_id": 33,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 159
+      },
+      {
+        "plan_id": 34,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 160
+      },
+      {
+        "plan_id": 34,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 161
+      },
+      {
+        "plan_id": 34,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 162
+      },
+      {
+        "plan_id": 34,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 163
+      },
+      {
+        "plan_id": 34,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 164
+      },
+      {
+        "plan_id": 35,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 165
+      },
+      {
+        "plan_id": 35,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 166
+      },
+      {
+        "plan_id": 35,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 167
+      },
+      {
+        "plan_id": 35,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 168
+      },
+      {
+        "plan_id": 35,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 169
+      },
+      {
+        "plan_id": 36,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 170
+      },
+      {
+        "plan_id": 36,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 171
+      },
+      {
+        "plan_id": 36,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 172
+      },
+      {
+        "plan_id": 36,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 173
+      },
+      {
+        "plan_id": 36,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 174
+      },
+      {
+        "plan_id": 37,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 175
+      },
+      {
+        "plan_id": 37,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 176
+      },
+      {
+        "plan_id": 37,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 177
+      },
+      {
+        "plan_id": 37,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 178
+      },
+      {
+        "plan_id": 37,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 179
+      },
+      {
+        "plan_id": 38,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 180
+      },
+      {
+        "plan_id": 38,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 181
+      },
+      {
+        "plan_id": 38,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 182
+      },
+      {
+        "plan_id": 38,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 183
+      },
+      {
+        "plan_id": 38,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 184
+      },
+      {
+        "plan_id": 39,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 185
+      },
+      {
+        "plan_id": 39,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 186
+      },
+      {
+        "plan_id": 39,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 187
+      },
+      {
+        "plan_id": 39,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 188
+      },
+      {
+        "plan_id": 39,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 189
+      },
+      {
+        "plan_id": 40,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 190
+      },
+      {
+        "plan_id": 40,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 191
+      },
+      {
+        "plan_id": 40,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 192
+      },
+      {
+        "plan_id": 40,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 193
+      },
+      {
+        "plan_id": 40,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 194
+      },
+      {
+        "plan_id": 41,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 195
+      },
+      {
+        "plan_id": 41,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 196
+      },
+      {
+        "plan_id": 41,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 197
+      },
+      {
+        "plan_id": 41,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 198
+      },
+      {
+        "plan_id": 41,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 199
+      },
+      {
+        "plan_id": 42,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 200
+      },
+      {
+        "plan_id": 42,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 201
+      },
+      {
+        "plan_id": 42,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:26:19.828244+00:00",
+        "etd": "2026-05-31T07:51:19.828244+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 202
+      },
+      {
+        "plan_id": 42,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 203
+      },
+      {
+        "plan_id": 42,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T07:54:25.468385+00:00",
+        "etd": "2026-05-31T08:09:25.468385+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 204
+      },
+      {
+        "plan_id": 43,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:30:43.112736+00:00",
+        "etd": "2026-05-31T06:50:43.112736+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 205
+      },
+      {
+        "plan_id": 43,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T06:57:13.095339+00:00",
+        "etd": "2026-05-31T07:15:13.095339+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 206
+      },
+      {
+        "plan_id": 43,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:40:43.112736+00:00",
+        "etd": "2026-05-31T08:10:43.112736+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 207
+      },
+      {
+        "plan_id": 43,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:30:43.112736+00:00",
+        "etd": "2026-05-31T07:45:43.112736+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 208
+      },
+      {
+        "plan_id": 44,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:38:32.793762+00:00",
+        "etd": "2026-05-31T06:58:32.793762+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 209
+      },
+      {
+        "plan_id": 44,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:05:02.776365+00:00",
+        "etd": "2026-05-31T07:23:02.776365+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 210
+      },
+      {
+        "plan_id": 44,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:34:09.509270+00:00",
+        "etd": "2026-05-31T07:59:09.509270+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 211
+      },
+      {
+        "plan_id": 44,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:48:32.793762+00:00",
+        "etd": "2026-05-31T08:18:32.793762+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 212
+      },
+      {
+        "plan_id": 44,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:02:15.149411+00:00",
+        "etd": "2026-05-31T08:17:15.149411+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 213
+      },
+      {
+        "plan_id": 45,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:40:14.023952+00:00",
+        "etd": "2026-05-31T07:00:14.023952+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 214
+      },
+      {
+        "plan_id": 45,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:06:44.006555+00:00",
+        "etd": "2026-05-31T07:24:44.006555+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 215
+      },
+      {
+        "plan_id": 45,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:50.739460+00:00",
+        "etd": "2026-05-31T08:00:50.739460+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 216
+      },
+      {
+        "plan_id": 45,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:50:14.023952+00:00",
+        "etd": "2026-05-31T08:20:14.023952+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 217
+      },
+      {
+        "plan_id": 45,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:03:56.379601+00:00",
+        "etd": "2026-05-31T08:18:56.379601+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 218
+      },
+      {
+        "plan_id": 46,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:40:14.023952+00:00",
+        "etd": "2026-05-31T07:00:14.023952+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 219
+      },
+      {
+        "plan_id": 46,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:06:44.006555+00:00",
+        "etd": "2026-05-31T07:24:44.006555+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 220
+      },
+      {
+        "plan_id": 46,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:50.739460+00:00",
+        "etd": "2026-05-31T08:00:50.739460+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 221
+      },
+      {
+        "plan_id": 46,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:50:14.023952+00:00",
+        "etd": "2026-05-31T08:20:14.023952+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 222
+      },
+      {
+        "plan_id": 46,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:03:56.379601+00:00",
+        "etd": "2026-05-31T08:18:56.379601+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 223
+      },
+      {
+        "plan_id": 47,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:40:14.023952+00:00",
+        "etd": "2026-05-31T07:00:14.023952+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 224
+      },
+      {
+        "plan_id": 47,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:06:44.006555+00:00",
+        "etd": "2026-05-31T07:24:44.006555+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 225
+      },
+      {
+        "plan_id": 47,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:50.739460+00:00",
+        "etd": "2026-05-31T08:00:50.739460+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 226
+      },
+      {
+        "plan_id": 47,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:50:14.023952+00:00",
+        "etd": "2026-05-31T08:20:14.023952+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 227
+      },
+      {
+        "plan_id": 47,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:03:56.379601+00:00",
+        "etd": "2026-05-31T08:18:56.379601+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 228
+      },
+      {
+        "plan_id": 48,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:40:14.023952+00:00",
+        "etd": "2026-05-31T07:00:14.023952+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 229
+      },
+      {
+        "plan_id": 48,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:06:44.006555+00:00",
+        "etd": "2026-05-31T07:24:44.006555+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 230
+      },
+      {
+        "plan_id": 48,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:50.739460+00:00",
+        "etd": "2026-05-31T08:00:50.739460+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 231
+      },
+      {
+        "plan_id": 48,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:50:14.023952+00:00",
+        "etd": "2026-05-31T08:20:14.023952+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 232
+      },
+      {
+        "plan_id": 48,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:03:56.379601+00:00",
+        "etd": "2026-05-31T08:18:56.379601+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 233
+      },
+      {
+        "plan_id": 49,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T06:40:14.023952+00:00",
+        "etd": "2026-05-31T07:00:14.023952+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 234
+      },
+      {
+        "plan_id": 49,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:06:44.006555+00:00",
+        "etd": "2026-05-31T07:24:44.006555+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 235
+      },
+      {
+        "plan_id": 49,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T07:35:50.739460+00:00",
+        "etd": "2026-05-31T08:00:50.739460+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 236
+      },
+      {
+        "plan_id": 49,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T07:50:14.023952+00:00",
+        "etd": "2026-05-31T08:20:14.023952+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 237
+      },
+      {
+        "plan_id": 49,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:03:56.379601+00:00",
+        "etd": "2026-05-31T08:18:56.379601+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 238
+      },
+      {
+        "plan_id": 50,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 239
+      },
+      {
+        "plan_id": 50,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 240
+      },
+      {
+        "plan_id": 50,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T08:10:31.949594+00:00",
+        "etd": "2026-05-31T08:40:31.949594+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 241
+      },
+      {
+        "plan_id": 50,
+        "order_id": 5,
+        "vehicle_id": 3,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T08:00:31.949594+00:00",
+        "etd": "2026-05-31T08:15:31.949594+00:00",
+        "distance_from_prev_km": 3.4,
+        "risk_level": "ok",
+        "id": 242
+      },
+      {
+        "plan_id": 51,
+        "order_id": 1,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 243
+      },
+      {
+        "plan_id": 51,
+        "order_id": 4,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 244
+      },
+      {
+        "plan_id": 52,
+        "order_id": 1,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 245
+      },
+      {
+        "plan_id": 52,
+        "order_id": 4,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 246
+      },
+      {
+        "plan_id": 53,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 247
+      },
+      {
+        "plan_id": 53,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 248
+      },
+      {
+        "plan_id": 54,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 249
+      },
+      {
+        "plan_id": 54,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 250
+      },
+      {
+        "plan_id": 55,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 251
+      },
+      {
+        "plan_id": 55,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 252
+      },
+      {
+        "plan_id": 56,
+        "order_id": 1,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 253
+      },
+      {
+        "plan_id": 56,
+        "order_id": 4,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 254
+      },
+      {
+        "plan_id": 57,
+        "order_id": 1,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 255
+      },
+      {
+        "plan_id": 57,
+        "order_id": 4,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 256
+      },
+      {
+        "plan_id": 58,
+        "order_id": 1,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 257
+      },
+      {
+        "plan_id": 58,
+        "order_id": 4,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 258
+      },
+      {
+        "plan_id": 59,
+        "order_id": 1,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:00:31.949594+00:00",
+        "etd": "2026-05-31T07:20:31.949594+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 259
+      },
+      {
+        "plan_id": 59,
+        "order_id": 4,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:27:01.932197+00:00",
+        "etd": "2026-05-31T07:45:01.932197+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 260
+      },
+      {
+        "plan_id": 59,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T08:10:31.949594+00:00",
+        "etd": "2026-05-31T08:40:31.949594+00:00",
+        "distance_from_prev_km": 7.88,
+        "risk_level": "ok",
+        "id": 261
+      },
+      {
+        "plan_id": 59,
+        "order_id": 5,
+        "vehicle_id": 2,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:50:31.946930+00:00",
+        "etd": "2026-05-31T09:05:31.946930+00:00",
+        "distance_from_prev_km": 6.33,
+        "risk_level": "ok",
+        "id": 262
+      },
+      {
+        "plan_id": 60,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:09:56.227921+00:00",
+        "etd": "2026-05-31T07:29:56.227921+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 263
+      },
+      {
+        "plan_id": 60,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:36:26.210524+00:00",
+        "etd": "2026-05-31T07:54:26.210524+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 264
+      },
+      {
+        "plan_id": 60,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T08:05:32.943429+00:00",
+        "etd": "2026-05-31T08:30:32.943429+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 265
+      },
+      {
+        "plan_id": 60,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T08:19:56.227921+00:00",
+        "etd": "2026-05-31T08:49:56.227921+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 266
+      },
+      {
+        "plan_id": 60,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:33:38.583570+00:00",
+        "etd": "2026-05-31T08:48:38.583570+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 267
+      },
+      {
+        "plan_id": 61,
+        "order_id": 1,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:09:56.227921+00:00",
+        "etd": "2026-05-31T07:29:56.227921+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 268
+      },
+      {
+        "plan_id": 61,
+        "order_id": 4,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:36:26.210524+00:00",
+        "etd": "2026-05-31T07:54:26.210524+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 269
+      },
+      {
+        "plan_id": 61,
+        "order_id": 2,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 3,
+        "eta": "2026-05-31T08:05:32.943429+00:00",
+        "etd": "2026-05-31T08:30:32.943429+00:00",
+        "distance_from_prev_km": 7.04,
+        "risk_level": "ok",
+        "id": 270
+      },
+      {
+        "plan_id": 61,
+        "order_id": 3,
+        "vehicle_id": 2,
+        "driver_id": 2,
+        "sequence": 1,
+        "eta": "2026-05-31T08:19:56.227921+00:00",
+        "etd": "2026-05-31T08:49:56.227921+00:00",
+        "distance_from_prev_km": 4.93,
+        "risk_level": "ok",
+        "id": 271
+      },
+      {
+        "plan_id": 61,
+        "order_id": 5,
+        "vehicle_id": 1,
+        "driver_id": 1,
+        "sequence": 4,
+        "eta": "2026-05-31T08:33:38.583570+00:00",
+        "etd": "2026-05-31T08:48:38.583570+00:00",
+        "distance_from_prev_km": 1.96,
+        "risk_level": "ok",
+        "id": 272
+      },
+      {
+        "plan_id": 62,
+        "order_id": 1,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 1,
+        "eta": "2026-05-31T07:12:30.958743+00:00",
+        "etd": "2026-05-31T07:32:30.958743+00:00",
+        "distance_from_prev_km": 3.0,
+        "risk_level": "ok",
+        "id": 273
+      },
+      {
+        "plan_id": 62,
+        "order_id": 4,
+        "vehicle_id": 3,
+        "driver_id": 1,
+        "sequence": 2,
+        "eta": "2026-05-31T07:39:00.941346+00:00",
+        "etd": "2026-05-31T07:57:00.941346+00:00",
+        "distance_from_prev_km": 4.12,
+        "risk_level": "ok",
+        "id": 274
+      }
+    ],
+    "incidents": [
+      {
+        "id": 1,
+        "plan_id": 35,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:00:54.175630+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 2,
+        "plan_id": 35,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:00:55.610662+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 3,
+        "plan_id": 43,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:04:15.299833+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 4,
+        "plan_id": 43,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:04:35.898039+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 5,
+        "plan_id": 43,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:04:36.491795+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 6,
+        "plan_id": 43,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:04:38.717582+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 7,
+        "plan_id": 43,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:04:39.263207+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 8,
+        "plan_id": 43,
+        "severity": "medium",
+        "title": "Retraso en acceso a clienteasfasf",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:04:44.815623+00:00",
+        "is_resolved": true
+      },
+      {
+        "id": 9,
+        "plan_id": 49,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "created_at": "2026-05-31T06:10:54.522862+00:00",
+        "is_resolved": true
+      },
+      {
+        "plan_id": 55,
+        "severity": "medium",
+        "title": "Retraso en acceso a cliente",
+        "description": "Reporte de bloqueo vial en corredor principal.",
+        "id": 10,
+        "created_at": "2026-05-31T06:33:36.700594+00:00",
+        "is_resolved": false
+      }
+    ],
+    "auditlogs": [
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 1,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 1,
+        "timestamp": "2026-05-31T05:50:56.662047+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 2,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 2,
+        "timestamp": "2026-05-31T05:55:03.110633+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 3,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 3,
+        "timestamp": "2026-05-31T05:56:49.542063+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 3,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 4,
+        "timestamp": "2026-05-31T05:56:50.301650+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 4,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 5,
+        "timestamp": "2026-05-31T05:56:55.716885+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 4,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 6,
+        "timestamp": "2026-05-31T05:56:55.736029+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 5,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 7,
+        "timestamp": "2026-05-31T05:56:57.424608+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 5,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 8,
+        "timestamp": "2026-05-31T05:56:57.444482+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 6,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 9,
+        "timestamp": "2026-05-31T05:57:00.562675+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 6,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 10,
+        "timestamp": "2026-05-31T05:57:00.581418+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 7,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 11,
+        "timestamp": "2026-05-31T05:57:01.252942+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 7,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 12,
+        "timestamp": "2026-05-31T05:57:01.275163+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 8,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 13,
+        "timestamp": "2026-05-31T05:57:01.625275+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 8,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 14,
+        "timestamp": "2026-05-31T05:57:01.643389+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 9,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 15,
+        "timestamp": "2026-05-31T05:57:01.819593+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 9,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 16,
+        "timestamp": "2026-05-31T05:57:01.841835+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 10,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 17,
+        "timestamp": "2026-05-31T05:57:01.978927+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 10,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 18,
+        "timestamp": "2026-05-31T05:57:02.008325+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 11,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 19,
+        "timestamp": "2026-05-31T05:57:02.173466+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 11,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 20,
+        "timestamp": "2026-05-31T05:57:02.194670+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 12,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 21,
+        "timestamp": "2026-05-31T05:57:02.329989+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 12,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 22,
+        "timestamp": "2026-05-31T05:57:02.361682+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 13,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 23,
+        "timestamp": "2026-05-31T05:57:04.409097+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 13,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 24,
+        "timestamp": "2026-05-31T05:57:04.428580+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 14,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 25,
+        "timestamp": "2026-05-31T05:57:04.735278+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 14,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 26,
+        "timestamp": "2026-05-31T05:57:04.755108+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 15,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 27,
+        "timestamp": "2026-05-31T05:57:04.871662+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 15,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 28,
+        "timestamp": "2026-05-31T05:57:04.891414+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 16,
+        "details_json": {
+          "source_plan_id": 15
+        },
+        "id": 29,
+        "timestamp": "2026-05-31T05:57:05.253320+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 17,
+        "details_json": {
+          "source_plan_id": 16
+        },
+        "id": 30,
+        "timestamp": "2026-05-31T05:57:06.200645+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 18,
+        "details_json": {
+          "source_plan_id": 17
+        },
+        "id": 31,
+        "timestamp": "2026-05-31T05:57:06.668451+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 19,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 32,
+        "timestamp": "2026-05-31T05:57:07.565479+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 20,
+        "details_json": {
+          "source_plan_id": 19
+        },
+        "id": 33,
+        "timestamp": "2026-05-31T05:57:08.724906+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "source_plan_id": 20
+        },
+        "id": 34,
+        "timestamp": "2026-05-31T05:57:09.663156+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 35,
+        "timestamp": "2026-05-31T05:57:10.857889+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 36,
+        "timestamp": "2026-05-31T05:57:11.453888+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 37,
+        "timestamp": "2026-05-31T05:57:11.621290+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 38,
+        "timestamp": "2026-05-31T05:57:11.797187+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 39,
+        "timestamp": "2026-05-31T05:57:11.989983+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 40,
+        "timestamp": "2026-05-31T05:57:12.139478+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 21,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 41,
+        "timestamp": "2026-05-31T05:57:52.704340+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 22,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 42,
+        "timestamp": "2026-05-31T05:57:53.719578+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 22,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 43,
+        "timestamp": "2026-05-31T05:57:53.740373+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 23,
+        "details_json": {
+          "source_plan_id": 22
+        },
+        "id": 44,
+        "timestamp": "2026-05-31T05:57:59.855533+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 24,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 45,
+        "timestamp": "2026-05-31T05:58:05.303823+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 24,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 46,
+        "timestamp": "2026-05-31T05:58:05.324267+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 25,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 47,
+        "timestamp": "2026-05-31T05:58:06.243598+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 25,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 48,
+        "timestamp": "2026-05-31T05:58:06.264507+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 26,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 49,
+        "timestamp": "2026-05-31T05:58:06.541376+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 26,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 50,
+        "timestamp": "2026-05-31T05:58:06.563415+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 27,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 51,
+        "timestamp": "2026-05-31T05:58:06.711843+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 27,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 52,
+        "timestamp": "2026-05-31T05:58:06.732075+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 28,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 53,
+        "timestamp": "2026-05-31T05:58:06.878008+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 28,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 54,
+        "timestamp": "2026-05-31T05:58:06.904256+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 29,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 55,
+        "timestamp": "2026-05-31T06:00:48.051340+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 30,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 56,
+        "timestamp": "2026-05-31T06:00:48.663182+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 31,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 57,
+        "timestamp": "2026-05-31T06:00:48.842495+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 32,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 58,
+        "timestamp": "2026-05-31T06:00:49.007070+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 32,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 59,
+        "timestamp": "2026-05-31T06:00:49.618581+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 33,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 60,
+        "timestamp": "2026-05-31T06:00:50.351679+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 33,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 61,
+        "timestamp": "2026-05-31T06:00:50.376845+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 34,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 62,
+        "timestamp": "2026-05-31T06:00:51.022863+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 34,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 63,
+        "timestamp": "2026-05-31T06:00:51.044600+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 35,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 64,
+        "timestamp": "2026-05-31T06:00:51.170439+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 35,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 65,
+        "timestamp": "2026-05-31T06:00:51.193585+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 1,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 66,
+        "timestamp": "2026-05-31T06:00:54.178450+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 2,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 67,
+        "timestamp": "2026-05-31T06:00:55.613748+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 36,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 68,
+        "timestamp": "2026-05-31T06:01:22.349451+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 36,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 69,
+        "timestamp": "2026-05-31T06:01:22.371969+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 70,
+        "timestamp": "2026-05-31T06:01:22.705387+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 71,
+        "timestamp": "2026-05-31T06:01:22.729613+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 72,
+        "timestamp": "2026-05-31T06:01:35.427509+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 73,
+        "timestamp": "2026-05-31T06:01:35.617539+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 74,
+        "timestamp": "2026-05-31T06:01:35.788566+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 75,
+        "timestamp": "2026-05-31T06:01:35.934984+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 76,
+        "timestamp": "2026-05-31T06:01:36.093477+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 37,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 77,
+        "timestamp": "2026-05-31T06:01:36.251954+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 38,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 78,
+        "timestamp": "2026-05-31T06:01:56.811092+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 38,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 79,
+        "timestamp": "2026-05-31T06:01:56.834080+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 39,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 80,
+        "timestamp": "2026-05-31T06:02:12.112195+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 39,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 81,
+        "timestamp": "2026-05-31T06:03:00.658984+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 40,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 82,
+        "timestamp": "2026-05-31T06:03:11.057076+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 40,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 83,
+        "timestamp": "2026-05-31T06:03:11.081031+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 41,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 84,
+        "timestamp": "2026-05-31T06:03:20.118813+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 41,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 85,
+        "timestamp": "2026-05-31T06:03:20.139790+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 42,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 86,
+        "timestamp": "2026-05-31T06:03:20.602777+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 42,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 87,
+        "timestamp": "2026-05-31T06:03:20.624876+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 43,
+        "details_json": {
+          "source_plan_id": 42
+        },
+        "id": 88,
+        "timestamp": "2026-05-31T06:03:36.475608+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 43,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 89,
+        "timestamp": "2026-05-31T06:03:44.872127+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 43,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 90,
+        "timestamp": "2026-05-31T06:03:52.301533+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 3,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 91,
+        "timestamp": "2026-05-31T06:04:15.302694+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 4,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 92,
+        "timestamp": "2026-05-31T06:04:35.900476+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 5,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 93,
+        "timestamp": "2026-05-31T06:04:36.495149+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 6,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 94,
+        "timestamp": "2026-05-31T06:04:38.720371+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 7,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 95,
+        "timestamp": "2026-05-31T06:04:39.265624+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 8,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 96,
+        "timestamp": "2026-05-31T06:04:44.818118+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 8,
+        "details_json": {},
+        "id": 97,
+        "timestamp": "2026-05-31T06:04:48.676818+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 7,
+        "details_json": {},
+        "id": 98,
+        "timestamp": "2026-05-31T06:04:49.377720+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 6,
+        "details_json": {},
+        "id": 99,
+        "timestamp": "2026-05-31T06:04:49.715761+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 5,
+        "details_json": {},
+        "id": 100,
+        "timestamp": "2026-05-31T06:04:49.918530+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 4,
+        "details_json": {},
+        "id": 101,
+        "timestamp": "2026-05-31T06:04:50.094076+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 3,
+        "details_json": {},
+        "id": 102,
+        "timestamp": "2026-05-31T06:04:50.269473+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 2,
+        "details_json": {},
+        "id": 103,
+        "timestamp": "2026-05-31T06:04:50.435371+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 1,
+        "details_json": {},
+        "id": 104,
+        "timestamp": "2026-05-31T06:04:50.569457+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 44,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 105,
+        "timestamp": "2026-05-31T06:08:58.673964+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 45,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 106,
+        "timestamp": "2026-05-31T06:10:25.390631+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 46,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 107,
+        "timestamp": "2026-05-31T06:10:26.139688+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 47,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 108,
+        "timestamp": "2026-05-31T06:10:26.797944+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 48,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 109,
+        "timestamp": "2026-05-31T06:10:27.224774+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 110,
+        "timestamp": "2026-05-31T06:10:29.155778+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 111,
+        "timestamp": "2026-05-31T06:10:30.779300+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 112,
+        "timestamp": "2026-05-31T06:10:33.621618+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 113,
+        "timestamp": "2026-05-31T06:10:34.166694+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 114,
+        "timestamp": "2026-05-31T06:10:34.320912+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 115,
+        "timestamp": "2026-05-31T06:10:34.503740+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 9,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 116,
+        "timestamp": "2026-05-31T06:10:54.526484+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "resolve_incident",
+        "entity": "incident",
+        "entity_id": 9,
+        "details_json": {},
+        "id": 117,
+        "timestamp": "2026-05-31T06:14:14.474885+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 118,
+        "timestamp": "2026-05-31T06:25:09.735555+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 119,
+        "timestamp": "2026-05-31T06:27:15.751463+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 120,
+        "timestamp": "2026-05-31T06:27:15.765477+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 121,
+        "timestamp": "2026-05-31T06:29:02.201714+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 122,
+        "timestamp": "2026-05-31T06:29:11.753149+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 49,
+        "details_json": {
+          "tracking_points": 7
+        },
+        "id": 123,
+        "timestamp": "2026-05-31T06:29:21.294582+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 50,
+        "details_json": {
+          "source_plan_id": 49
+        },
+        "id": 124,
+        "timestamp": "2026-05-31T06:30:49.703464+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 50,
+        "details_json": {
+          "tracking_points": 6
+        },
+        "id": 125,
+        "timestamp": "2026-05-31T06:32:20.795638+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 51,
+        "details_json": {
+          "assigned_orders": 2
+        },
+        "id": 126,
+        "timestamp": "2026-05-31T06:32:44.588028+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 50,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 127,
+        "timestamp": "2026-05-31T06:32:49.944463+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 52,
+        "details_json": {
+          "assigned_orders": 2
+        },
+        "id": 128,
+        "timestamp": "2026-05-31T06:32:55.369212+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 52,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 129,
+        "timestamp": "2026-05-31T06:33:00.785156+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 51,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 130,
+        "timestamp": "2026-05-31T06:33:11.848078+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 51,
+        "details_json": {
+          "tracking_points": 3
+        },
+        "id": 131,
+        "timestamp": "2026-05-31T06:33:14.240942+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 52,
+        "details_json": {
+          "tracking_points": 3
+        },
+        "id": 132,
+        "timestamp": "2026-05-31T06:33:16.426501+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 53,
+        "details_json": {
+          "source_plan_id": 52
+        },
+        "id": 133,
+        "timestamp": "2026-05-31T06:33:27.366768+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 54,
+        "details_json": {
+          "source_plan_id": 52
+        },
+        "id": 134,
+        "timestamp": "2026-05-31T06:33:29.632254+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "reprogram_plan",
+        "entity": "plan",
+        "entity_id": 55,
+        "details_json": {
+          "source_plan_id": 52
+        },
+        "id": 135,
+        "timestamp": "2026-05-31T06:33:30.922153+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "create_incident",
+        "entity": "incident",
+        "entity_id": 10,
+        "details_json": {
+          "severity": "medium"
+        },
+        "id": 136,
+        "timestamp": "2026-05-31T06:33:36.705015+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 55,
+        "details_json": {
+          "tracking_points": 3
+        },
+        "id": 137,
+        "timestamp": "2026-05-31T06:33:41.781987+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 56,
+        "details_json": {
+          "assigned_orders": 2
+        },
+        "id": 138,
+        "timestamp": "2026-05-31T06:34:01.554519+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 57,
+        "details_json": {
+          "assigned_orders": 2
+        },
+        "id": 139,
+        "timestamp": "2026-05-31T06:34:02.968753+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 57,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 140,
+        "timestamp": "2026-05-31T06:34:02.993834+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 57,
+        "details_json": {
+          "tracking_points": 3
+        },
+        "id": 141,
+        "timestamp": "2026-05-31T06:34:03.002534+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 58,
+        "details_json": {
+          "assigned_orders": 2
+        },
+        "id": 142,
+        "timestamp": "2026-05-31T06:34:04.354018+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 58,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 143,
+        "timestamp": "2026-05-31T06:34:04.377674+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 58,
+        "details_json": {
+          "tracking_points": 3
+        },
+        "id": 144,
+        "timestamp": "2026-05-31T06:34:04.386679+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 59,
+        "details_json": {
+          "assigned_orders": 4
+        },
+        "id": 145,
+        "timestamp": "2026-05-31T06:34:13.681638+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "dispatch_plan",
+        "entity": "plan",
+        "entity_id": 59,
+        "details_json": {
+          "notes": "Despacho confirmado desde panel"
+        },
+        "id": 146,
+        "timestamp": "2026-05-31T06:34:13.704338+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 59,
+        "details_json": {
+          "tracking_points": 5
+        },
+        "id": 147,
+        "timestamp": "2026-05-31T06:34:13.713440+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_tracking",
+        "entity": "plan",
+        "entity_id": 59,
+        "details_json": {
+          "tracking_points": 5
+        },
+        "id": 148,
+        "timestamp": "2026-05-31T06:40:39.739050+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 60,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 149,
+        "timestamp": "2026-05-31T06:40:52.788337+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 61,
+        "details_json": {
+          "assigned_orders": 5
+        },
+        "id": 150,
+        "timestamp": "2026-05-31T06:41:20.766180+00:00"
+      },
+      {
+        "username": "planner",
+        "action": "generate_plan",
+        "entity": "plan",
+        "entity_id": 62,
+        "details_json": {
+          "assigned_orders": 2
+        },
+        "id": 151,
+        "timestamp": "2026-05-31T06:43:10.144202+00:00"
+      }
+    ]
+  },
+  "counters": {
+    "users": 3,
+    "vehicles": 3,
+    "drivers": 3,
+    "orders": 5,
+    "plans": 62,
+    "planstops": 274,
+    "incidents": 10,
+    "auditlogs": 151
+  }
+}
